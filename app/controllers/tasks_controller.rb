@@ -1,6 +1,11 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
+  # Display tasks organised in the Eisenhower matrix
+  def matrix
+    @tasks = Task.all.group_by(&:quadrant)
+  end
+
   # GET /tasks
   # GET /tasks.json
   def index
