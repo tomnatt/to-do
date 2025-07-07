@@ -1,0 +1,36 @@
+<h1>Eisenhower Matrix</h1>
+
+<div class="matrix">
+  <div class="quadrant q1">
+    <h2>Important &amp; Urgent</h2>
+    <ul>
+      <% (@tasks[1] || []).each do |task| %>
+        <li><%= link_to task.name, task %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="quadrant q2">
+    <h2>Important &amp; Not Urgent</h2>
+    <ul>
+      <% (@tasks[2] || []).each do |task| %>
+        <li><%= link_to task.name, task %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="quadrant q3">
+    <h2>Not Important &amp; Urgent</h2>
+    <ul>
+      <% (@tasks[3] || []).each do |task| %>
+        <li><%= link_to task.name, task %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="quadrant q4">
+    <h2>Not Important &amp; Not Urgent</h2>
+    <ul>
+      <% (@tasks[4] || []).each do |task| %>
+        <li><%= link_to task.name, task %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

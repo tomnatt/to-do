@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'graph/index'
 
+  get 'matrix', to: 'tasks#matrix'
+
   resources :tasks
 
   root 'graph#index'
