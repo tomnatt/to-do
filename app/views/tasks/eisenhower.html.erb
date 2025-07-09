@@ -1,0 +1,35 @@
+<h1>Eisenhower Matrix</h1>
+<table border="1">
+  <tr>
+    <th></th>
+    <th>Urgent</th>
+    <th>Not Urgent</th>
+  </tr>
+  <tr>
+    <th>Important</th>
+    <td>
+      <% @tasks.select { |t| t.urgent && t.important }.each do |task| %>
+        <div><%= task.title %></div>
+      <% end %>
+    </td>
+    <td>
+      <% @tasks.select { |t| !t.urgent && t.important }.each do |task| %>
+        <div><%= task.title %></div>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <th>Not Important</th>
+    <td>
+      <% @tasks.select { |t| t.urgent && !t.important }.each do |task| %>
+        <div><%= task.title %></div>
+      <% end %>
+    </td>
+    <td>
+      <% @tasks.select { |t| !t.urgent && !t.important }.each do |task| %>
+        <div><%= task.title %></div>
+      <% end %>
+    </td>
+  </tr>
+</table>
+<a href="/">Back to Tasks</a>

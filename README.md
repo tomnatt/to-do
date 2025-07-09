@@ -1,6 +1,5 @@
-to-do
-=====
- 
-To do list written in Ruby to learn some Rails
+# Rails ToDo App
 
-http://nvd3.org/examples/scatter.html
+This is a new Ruby on Rails application for tracking tasks. Tasks can be viewed on an Eisenhower Matrix to help with prioritization.
+
+Due to environment restrictions, Rails dependencies are not installed. The repository contains a basic skeleton intended for a standard Rails setup.
